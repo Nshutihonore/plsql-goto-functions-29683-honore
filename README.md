@@ -119,3 +119,5 @@ See `screenshots/` for the output of each task. `B5_select_output.png` shows all
 
 - Years of service depend on `SYSDATE`, so those values change over time. Expected values in the tests are for October 2026.
 - **AI usage:** I used an AI assistant (Claude by Anthropic) as a tutor while working on this assignment. It explained the GOTO rules and function concepts, and helped draft and debug the SQL and this README. I ran all code myself in Oracle SQL Developer, checked the outputs, took the screenshots, and I can explain every file in this repository.
+- - Tax brackets and salary bands are my own assumptions, because the assignment did not specify them.
+- test_functions.sql: all 18 checks for B1 to B4 passed (see Script Output when run).
