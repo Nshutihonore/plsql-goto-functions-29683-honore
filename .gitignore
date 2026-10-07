@@ -2,3 +2,15 @@
    Thumbs.db
    *.log
    *.bak
+
+-- -----------------------------------------------------
+-- NOTES: why the first block fails and how the fix works
+-- The first block fails to compile because the label <<bonus_msg>>
+-- is inside the IF ... END IF block, while the GOTO statement is
+-- outside it. PL/SQL allows a GOTO to jump out of a block to a label
+-- in an enclosing block, but it never allows a jump into an IF, LOOP,
+-- CASE or nested block. Oracle reports this as PLS-00375.
+-- In the fixed block I moved the label <<bonus_msg>> to the main
+-- block and kept the GOTO inside the IF. The jump now leaves the IF,
+-- which is legal, so the block compiles and prints the bonus message.
+-- -----------------------------------------------------
